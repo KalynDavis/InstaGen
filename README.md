@@ -5,13 +5,13 @@ Generate Instagram story and post images from an HTML canvas, then export or dow
 ## Install
 
 ```bash
-npm install @instagen/canvas
+npm install instagen
 ```
 
 ## Usage
 
 ```ts
-import { createInstagramCanvas } from "@instagen/canvas";
+import { createInstagramCanvas } from "instagen";
 
 const image = await createInstagramCanvas({
   format: "story",
