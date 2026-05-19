@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagen Canvas Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace">
+        <aside class="controls" aria-label="Image controls">
+          <div>
+            <p class="eyebrow">Instagen Canvas</p>
+            <h1>Instagram JPG generator</h1>
+          </div>
+
+          <label>
+            Format
+            <select id="format">
+              <option value="story">Story 1080 x 1920</option>
+              <option value="post">Post 1080 x 1080</option>
+              <option value="portrait">Portrait 1080 x 1350</option>
+              <option value="landscape">Landscape 1080 x 566</option>
+            </select>
+          </label>
+
+          <label>
+            Headline
+            <input id="headline" maxlength="42" value="Summer drop is live" />
+          </label>
+
+          <label>
+            Subhead
+            <input id="subhead" maxlength="70" value="Fresh templates for fast social launches" />
+          </label>
+
+          <label>
+            Theme
+            <select id="theme">
+              <option value="studio">Studio</option>
+              <option value="citrus">Citrus</option>
+              <option value="night">Night</option>
+            </select>
+          </label>
+
+          <label>
+            JPG quality <span id="qualityValue">92%</span>
+            <input id="quality" type="range" min="0.5" max="1" step="0.01" value="0.92" />
+          </label>
+
+          <div class="actions">
+            <button id="download" type="button">Download JPG</button>
+            <button id="randomize" type="button" class="secondary">Randomize</button>
+          </div>
+        </aside>
+
+        <section class="preview" aria-label="Generated canvas preview">
+          <div class="previewFrame">
+            <canvas id="previewCanvas"></canvas>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
